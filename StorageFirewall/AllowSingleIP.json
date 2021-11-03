@@ -1,0 +1,38 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Storage/storageAccounts"
+        },
+        {
+          "field": "Microsoft.Storage/storageAccounts/networkAcls.ipRules[*].value",
+          "notEquals": "[parameters('allowedAddressRanges')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "append",
+      "details": [
+        {
+          "field": "Microsoft.Storage/storageAccounts/networkAcls.ipRules[*]",
+          "value": {
+            "value": "[parameters('allowedAddressRanges')]",
+            "action": "Allow"
+          }
+        }
+      ]
+    }
+  },
+  "parameters": {
+    "allowedAddressRanges": {
+      "type": "String",
+      "metadata": {
+        "displayName": "IP or address range to whitelist",
+        "description": "The single allowed IP or address range (Provide a valid public IP address range in CIDR notation like 10.0.0.1/24 or an individual IP address like 10.0.0.2)"
+      }
+    }
+  }
+}
