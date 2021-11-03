@@ -2,13 +2,13 @@
 
 Storage Firewall is available for Storage Accounts in order to limit the IP addresses that have access to the information stored on the storage. Here is some documentation on how it works: https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
 
-The two policies here are intended to simplify the implementation of the Storage Firewall. Here is a summary of their funtionallity:
+The two policies here are intended to simplify the implementation of the Storage Firewall. Here is a summary of their funtionality:
 
  -  MandatoryFirewall.json: Creates a policy that does not allow to create public storage accounts. The storage account firewall needs to be enabled since the moment of the creation and cannot be turned off once the account exists
 
 <img src="image/AllowFirewall.png"/>
  
- -  AllowSingleIP.json: Receives a parameter that will be either a single IP or an address range and it will be added to the whitelist of the Firewall. You will not be able to remove the IP selected from the firewall, it will be enforced with the policy. You will be able to add additional IPs in case they are needed individually.Take into account that this policy adds only 1 IP at a time. For adding multiple IPs continue reading on the Policy section: Policy Initiative section of this document.
+ -  AllowSingleIP.json: Receives a parameter that will be either a single IP or an address range and it will be added to the whitelist of the Firewall. You will not be able to remove the IP selected from the firewall, it will be enforced with the policy. You will be able to add additional IPs in case they are needed individually. Take into account that this policy adds only 1 IP at a time. For adding multiple IPs continue reading the Policy: Policy Initiative section of this document.
 
 <img src="image/AllowedIPsList.png"/>
 
@@ -26,13 +26,13 @@ https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-ma
 
 A group that contains several policy definitions. For instance, if you want to use both of the policies mentioned above at the same time you can create a Policy Initiative that contains both in order to group them together. 
 
-With the policy initiative we will also be able to create the whole list of IPs that we will like to whitelist on the firewall since we can call several instances of the same policy definition (one per IP or address range that you will like to include). Here is the docs on how to create one: 
+With the policy initiative we will also be able to create the whole list of IPs that we would like to whitelist on the firewall since we can call several instances of the same policy definition (one per IP or address range that you will like to include). Here is the docs on how to create one: 
 
 https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage#create-and-assign-an-initiative-definition
 
 ## Policy Assignment
 
-Create a new assignment of the policy to choose which resources will be enforced to use the policy: you can choose either the whole susbscription or an specific resource group. You can choose to assign individual policies or policy initiative definitions depending on your needs. Refer to this documentation as well to create a policy assignment:
+Create a new assignment of the policy to choose which resources will be enforced to use the policy: you can choose either the whole subscription or a specific resource group. You can choose to assign individual policies or policy initiative definitions depending on your needs. Refer to this documentation as well to create a policy assignment:
 
 https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage#create-and-assign-an-initiative-definition
 
