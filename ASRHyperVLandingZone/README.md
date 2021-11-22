@@ -17,7 +17,7 @@ Make sure to check the following documentation when planning on ASR for Hyper V.
 ### ARCHITECTURE
 https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture
 
-### REQUIREMENTS without VMM
+### REQUIREMENTS and STEPS without VMM
 1. Deploy a Recovery Services Vault Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#create-a-recovery-services-vault
 2. Set up an Azure Network: where the VMs will land once failover is done: Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#set-up-an-azure-network
 3. Create a Storage Account that does not have Soft Delete enabled
@@ -29,7 +29,7 @@ https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture
 9. Do failover: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-failover-failback-tutorial
 
  
-### REQUIREMENTS with VMM
+### REQUIREMENTS and STEPS with VMM
 
 1. Deploy a Recovery Services Vault Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#create-a-recovery-services-vault
 2. Set up an Azure Network: where the VMs will land once failover is done: Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#set-up-an-azure-network
