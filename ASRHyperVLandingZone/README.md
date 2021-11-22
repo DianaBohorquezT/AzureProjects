@@ -1,4 +1,4 @@
-# ASR HyperV Landing Zone
+# ASR for HyperV Landing Zone
 
 This project is intended to get you started with a basic deployment of Azure prerequisites to use ASR with your Hyper V host. Feel free to modify this template given your own needs. Here is the architecture that we are going to deploy:
 
