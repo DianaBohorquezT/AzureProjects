@@ -10,6 +10,13 @@ The template called **template.json** is intended to deploy the following resour
 - Network Security Group attached to the VNET subnet (default). Currently it has RDP port opened for a specific public IP
 - Recovery Services Vault that is going to be used as the primary vault for replication to happen
 
+You can use **parameters.json** to enter custom values to the parameters stablished on the template.json file.
+
+## Target audience
+
+- Infrastructure Architect
+- IT Professional
+- Cloud Solution Architect
 
 ## Important documentation
 Make sure to check the following documentation when planning on ASR for physical machines. The JSON template is intended to simplify steps 1 - 3
