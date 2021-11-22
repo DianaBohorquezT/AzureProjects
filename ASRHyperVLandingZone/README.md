@@ -64,7 +64,7 @@ https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture
 - Create a new template 
 <img src=images/create.png/>
 - Give it a name and a description 
-<img src=images/name_desc.png/>
+<img src=images/name_desc.PNG/>
 - On ARM template tab, copy and paste the code of the [template.json](template.json) and save it 
 <img src=images/add_code.png/>
 - Select the newly added template and click deploy 
