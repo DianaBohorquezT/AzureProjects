@@ -21,12 +21,13 @@ https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-architecture
 1. Deploy a Recovery Services Vault Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#create-a-recovery-services-vault
 2. Set up an Azure Network: where the VMs will land once failover is done: Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#set-up-an-azure-network
 3. Create a Storage Account that does not have Soft Delete enabled
-4. Review you meet prerequisites for supported configuration: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-support-matrix#on-premises-servers
-5. Verify Internet access: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-prepare-on-premises-tutorial#verify-internet-access
-6. Think and prepare how you will connect to the replicated VMs: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-prepare-on-premises-tutorial#prepare-to-connect-to-azure-vms-after-failover
-7. Follow the next steps: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-tutorial
-8. Test failover: https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure
-9. Do failover: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-failover-failback-tutorial
+4. Think and prepare how you will connect to the replicated VMs: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-prepare-on-premises-tutorial#prepare-to-connect-to-azure-vms-after-failover
+5. Prepare the servers for installing the Mobility service: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#set-up-an-azure-storage-account
+6. Review you meet prerequisites for supported configuration: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-secondary-support-matrix
+7. Setup Configuration and Process server: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-set-up-source
+8. Create a replication policy: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#create-a-replication-policy
+9. Enable Replication: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#enable-replication
+10. Test Failover: https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure
 
 
 
