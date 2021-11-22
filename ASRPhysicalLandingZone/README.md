@@ -44,12 +44,12 @@ https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-architecture
 - Create a new template 
 <img src=images/create.png/>
 - Give it a name and a description 
-<img src=images/name_desc.PNG/>
+<img src=images/name_desc.PNG/ width="700">
 - On ARM template tab, copy and paste the code of the [template.json](template.json) and save it 
-<img src=images/add_code.png/>
+<img src=images/add_code.png/ width="700">
 - Select the newly added template and click deploy 
-<img src=images/deploy.png/>
+<img src=images/deploy.png/ width="700">
 - Fill out the blanks with your details and click purchase 
-<img src=images/Fill_out_details.png/>
+<img src=images/Fill_out_details.png/ width="700">
 - On a few minutes, the deployment should be ready to use.
 
