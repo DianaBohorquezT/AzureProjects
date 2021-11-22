@@ -2,7 +2,7 @@
 
 This project is intended to get you started with a basic deployment of Azure prerequisites to use ASR with your physical machines. Feel free to modify this template given your own needs. Here is the architecture that we are going to deploy:
 
-<img src="ASRPhysical-Architecture.jpg"/>
+<img src=images/ASRPhysical-Architecture.jpg/>
 
 The template called **template.json** is intended to deploy the following resources:
 - Storage Account without Soft delete enabled as required for ASR
