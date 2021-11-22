@@ -4,13 +4,13 @@ This project is intended to get you started with a basic deployment of Azure pre
 
 <img src=images/ASRPhysical-Architecture.jpg/>
 
-The template called **template.json** is intended to deploy the following resources:
+The template called [template.json](template.json) is intended to deploy the following resources:
 - Storage Account without Soft delete enabled as required for ASR
 - Virtual Network where the VMs will land after replication: change address space as per your own needs
 - Network Security Group attached to the VNET subnet (default). Currently it has RDP port opened for a specific public IP
 - Recovery Services Vault that is going to be used as the primary vault for replication to happen
 
-You can use **parameters.json** to enter custom values to the parameters stablished on the template.json file.
+You can use [parameters.json](parameters.json) to enter custom values to the parameters stablished on the template.json file.
 
 ## Target audience
 
@@ -36,5 +36,20 @@ https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-architecture
 9. Enable Replication: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#enable-replication
 10. Test Failover: https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure
 
+## Deploying an ARM Template using the Azure portal
 
+- Visit https://portal.azure.com
+- On the Search Bar, search for **Templates** 
+<img src=images/Search.png/>
+- Create a new template 
+<img src=images/create.png/>
+- Give it a name and a description 
+<img src=images/name_desc.PNG/>
+- On ARM template tab, copy and paste the code of the [template.json](template.json) and save it 
+<img src=images/add_code.png/>
+- Select the newly added template and click deploy 
+<img src=images/deploy.png/>
+- Fill out the blanks with your details and click purchase 
+<img src=images/Fill_out_details.png/>
+- On a few minutes, the deployment should be ready to use.
 
