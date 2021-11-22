@@ -4,12 +4,19 @@ This project is intended to get you started with a basic deployment of Azure pre
 
 <img src=images/BasicHyperVASR-Architecture.jpg/>
 
-The template called **template.json** is intended to deploy the following resources:
+The template called [template.json](template.json) is intended to deploy the following resources:
 - Storage Account without Soft delete enabled as required for ASR
 - Virtual Network where the VMs will land after replication: change address space as per your own needs
 - Network Security Group attached to the VNET subnet (default). Currently it has RDP port opened for a specific public IP
 - Recovery Services Vault that is going to be used as the primary vault for replication to happen
 
+You can use [parameters.json](parameters.json) to enter custom values to the parameters stablished on the template.json file.
+
+## Target audience
+
+- Infrastructure Architect
+- IT Professional
+- Cloud Solution Architect
 
 ## Important documentation
 Make sure to check the following documentation when planning on ASR for Hyper V. The JSON template is intended to simplify steps 1 - 3
@@ -48,3 +55,20 @@ https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-architecture
 8. Test failover: https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure
 9. Do failover: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-failover-failback-tutorial
 
+
+## Deploying an ARM Template using the Azure portal
+
+- Visit https://portal.azure.com
+- On the Search Bar, search for **Templates** 
+<img src=images/Search.png/>
+- Create a new template 
+<img src=images/create.png/>
+- Give it a name and a description 
+<img src=images/name_desc.png/>
+- On ARM template tab, copy and paste the code of the [template.json](template.json) and save it 
+<img src=images/add_code.png/>
+- Select the newly added template and click deploy 
+<img src=images/deploy.png/>
+- Fill out the blanks with your details and click purchase 
+<img src=images/Fill_out_details.png/>
+- On a few minutes, the deployment should be ready to use.
