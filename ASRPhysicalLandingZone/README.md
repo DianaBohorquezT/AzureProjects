@@ -29,12 +29,15 @@ https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-architecture
 2. Set up an Azure Network: where the VMs will land once failover is done: Prepare Azure for on-premises disaster recovery with https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure#set-up-an-azure-network
 3. Create a Storage Account that does not have Soft Delete enabled
 4. Think and prepare how you will connect to the replicated VMs: https://docs.microsoft.com/en-us/azure/site-recovery/hyper-v-prepare-on-premises-tutorial#prepare-to-connect-to-azure-vms-after-failover
-5. Prepare the servers for installing the Mobility service: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#set-up-an-azure-storage-account
+5. Prepare the servers for installing the Mobility service: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#set-up-an-azure-storage-account. Make sure you read the Mobility Service documentation as well: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-mobility-service-overview
 6. Review you meet prerequisites for supported configuration: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-secondary-support-matrix
 7. Setup Configuration and Process server: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-set-up-source
 8. Create a replication policy: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#create-a-replication-policy
 9. Enable Replication: https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery#enable-replication
 10. Test Failover: https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure
+
+### To failback on VMWare VMs
+1. Check the requiremetns 
 
 ## Deploying an ARM Template using the Azure portal
 
