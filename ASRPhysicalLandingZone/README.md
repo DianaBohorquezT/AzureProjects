@@ -37,7 +37,16 @@ https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-architecture
 10. Test Failover: https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure
 
 ### To failback on VMWare VMs
-1. Check the requiremetns 
+Physical servers replicated to Azure using Site Recovery can only fail back as VMware VMs. You need a VMware infrastructure in order to fail back. The infrastructure is also more complex and can be found in this doc https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-prepare-failback
+
+Follow the next steps to deploy the needed environment and test.
+
+1. Read the general info about failback: https://docs.microsoft.com/en-us/azure/site-recovery/physical-to-azure-failover-failback
+2. Prepare for reprotection/failback: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-prepare-failback
+3. Set up failback process server in Azure: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-set-up-process-server-azure
+4. Set up the Linux master target server in case the machines you are going to failback are Linux: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-install-linux-master-target
+5. Reprotect from Azure to on-premise: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-reprotect
+6. Failback to OnPremises: https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-failback
 
 ## Deploying an ARM Template using the Azure portal
 
