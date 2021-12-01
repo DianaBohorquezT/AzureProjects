@@ -1,6 +1,6 @@
 # How to deploy and assign policies
 
-This document is intended to explain how to deploy Azure policy LimitSKUAppService.json to Azure.
+This document is intended to explain how to deploy Azure policy [LimitSKUAppService.json](LimitSKUAppService.json) to Azure.
 
 There are three main concepts about policies on Azure that need to be clear in order to use them correctly for your resources:
 
@@ -31,7 +31,7 @@ https://docs.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-d
 
 This is a series of steps that I suggest for you to test these policies:
 
-1. Create the Policy Definition on your subscription using the file LimitSKUAppService.json
+1. Create the Policy Definition on your subscription using the file [LimitSKUAppService.json](LimitSKUAppService.json)
 2. Create a policy assignment and choose the scope where you want the policy to apply. On Parameters tab choose if you want to Audit or Deny the assignment.
 3. Once the policy is assigned, test creating the SKU types that you have allowed and the ones you have denied: you should get a policy error for the not allowed SKUS. Remember replication might take time so make sure to wait a couple of minutes after assignment before testing this
 
