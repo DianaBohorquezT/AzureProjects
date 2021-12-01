@@ -1,0 +1,39 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Web/serverFarms"
+          },
+          {
+            "field": "Microsoft.Web/serverFarms/sku.name",
+            "notIn": [
+              "P1v2",
+              "P1v3",
+              "S1",
+              "S2"
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny"
+        ],
+        "defaultValue": "Deny"
+      }
+    }
+  }
