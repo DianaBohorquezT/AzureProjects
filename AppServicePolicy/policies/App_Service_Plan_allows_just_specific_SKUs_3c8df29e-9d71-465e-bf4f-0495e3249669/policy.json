@@ -1,0 +1,54 @@
+{
+ "properties": {
+  "displayName": "App Service Plan allows just specific SKUs",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "Allow just a limited number of App Services plans based on the environment needs.",
+  "metadata": {
+   "category": "App Service",
+   "createdBy": "a0972a45-232f-4064-89ae-b7aac347cfa6",
+   "createdOn": "2021-11-18T21:08:52.4946155Z",
+   "updatedBy": "a0972a45-232f-4064-89ae-b7aac347cfa6",
+   "updatedOn": "2021-12-01T21:10:58.3926018Z"
+  },
+  "parameters": {
+   "effect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Audit",
+     "Deny"
+    ],
+    "defaultValue": "Deny"
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Web/serverFarms"
+     },
+     {
+      "field": "Microsoft.Web/serverFarms/sku.name",
+      "notIn": [
+       "P1v2",
+       "P1v3",
+       "S1",
+       "S2"
+      ]
+     }
+    ]
+   },
+   "then": {
+    "effect": "[parameters('effect')]"
+   }
+  }
+ },
+ "id": "/subscriptions/a2c3d14b-20c3-4ec2-90dc-d2707a660f76/providers/Microsoft.Authorization/policyDefinitions/3c8df29e-9d71-465e-bf4f-0495e3249669",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "3c8df29e-9d71-465e-bf4f-0495e3249669"
+}
